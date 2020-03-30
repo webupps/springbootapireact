@@ -1,20 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 // My Imports
 import NavBar from './components/Navbar/NavBar';
-import Home from './containers/Home/Home';
+import Routes from "./Routes";
 
 function App() {
   return (
     <div className="App">
       <header>
-        <NavBar />
+        <Router>
+          <NavBar />
+          <Routes />
+        </Router>
       </header>
-
-      <div className="container-fluid">
-        <Home />
-      </div>
     </div>
   );
 }
